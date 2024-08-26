@@ -61,6 +61,12 @@ public class Conversions
             keyboard.nextLine();
             double oz = ml / 29.5735;
             System.out.println(ml + " mililiters is " + String.format("%.2f", oz) + " ounces.");
-        } 
+        } else if (selection == 7) {
+            System.out.println("Enter Miles/Hour: ");
+            double mi_h = keyboard.nextDouble();
+            keyboard.nextLine();
+            double m_s = mi_h * 1; //TODO add conversion rate
+            System.out.println(mi_h + " Miles/Hour is " + String.format("%.2f", m_s) + " Meters/Second.");
+        }
     }
 }
