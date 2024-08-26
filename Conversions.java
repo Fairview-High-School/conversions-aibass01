@@ -17,24 +17,32 @@ public class Conversions
         System.out.println("4. Meters to Feet");
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
-        //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
-        //You can add even more if you would like.
+        System.out.println("7. Miles/Hour to Meters/Second");
+        System.out.println("8. Meters/Second to Miles/Hour");
+        System.out.println("9. Meters/s^2 to Gs");
+        System.out.println("10. Gs to Meters/s^2");
 
         int selection = keyboard.nextInt();
         keyboard.nextLine();  //go past the endline and be ready for more input
 
-        if (selection == 1)
-        {
+        if (selection == 1) {
             System.out.println("Enter Celsius: ");
             double celsius = keyboard.nextDouble();
             keyboard.nextLine();
             double fahrenheit = celsius * (9.0 / 5.0) + 32;
-            System.out.println(celsius + " degrees celsius is " + fahrenheit + " degrees fahrenheit");
+            System.out.println(celsius + " degrees celsius is " + fahrenheit + " degrees fahrenheit.");
+        } else if (selection == 2) {
+            System.out.println("Enter Farenheit: ");
+            double farenheit = keyboard.nextDouble();
+            keyboard.nextLine();
+            double celsius = (farenheit - 32) * (5.0/9.0);
+            System.out.println(farenheit + " degrees farenheit is " + String.format("%.2f", celsius) + " degrees celsius.");
+        } else if (selection == 3) {
+            System.out.println("Enter Feet: ");
+            double feet = keyboard.nextDouble();
+            keyboard.nextLine();
+            double meters = feet * 0.3048;
+            System.out.println(feet + " feet is " + String.format("%.2f", meters) + " meters.");
         }
-        if (selection == 2)
-        {
-            //add the code to ask the user to enter Fahrenheit and then convert to Celsius
-        }
-        //add more if statements here.
     }
 }
