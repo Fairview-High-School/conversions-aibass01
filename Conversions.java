@@ -43,6 +43,24 @@ public class Conversions
             keyboard.nextLine();
             double meters = feet * 0.3048;
             System.out.println(feet + " feet is " + String.format("%.2f", meters) + " meters.");
-        }
+        } else if (selection == 4) {
+            System.out.println("Enter Meters: ");
+            double meters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double feet = meters / 0.3048;
+            System.out.println(meters + " meters is " + String.format("%.2f", feet) + " feet.");
+        } else if (selection == 5) {
+            System.out.println("Enter Ounces: ");
+            double oz = keyboard.nextDouble();
+            keyboard.nextLine();
+            double ml = oz * 29.5735;
+            System.out.println(oz + " ounces is " + String.format("%.2f", ml) + " mililiters.");
+        } else if (selection == 6) {
+            System.out.println("Enter Mililiters: ");
+            double ml = keyboard.nextDouble();
+            keyboard.nextLine();
+            double oz = ml / 29.5735;
+            System.out.println(ml + " mililiters is " + String.format("%.2f", oz) + " ounces.");
+        } 
     }
 }
