@@ -65,8 +65,26 @@ public class Conversions
             System.out.println("Enter Miles/Hour: ");
             double mi_h = keyboard.nextDouble();
             keyboard.nextLine();
-            double m_s = mi_h * 1; //TODO add conversion rate
+            double m_s = mi_h * (1609.0/3600.0);
             System.out.println(mi_h + " Miles/Hour is " + String.format("%.2f", m_s) + " Meters/Second.");
+        } else if (selection == 8) {
+            System.out.println("Enter Meters/Second: ");
+            double m_s = keyboard.nextDouble();
+            keyboard.nextLine();
+            double mi_h = m_s / (1609.0/3600.0);
+            System.out.println(m_s + " Meters/Second is " + String.format("%.2f", mi_h) + " Miles/Hour.");
+        } else if (selection == 9) {
+            System.out.println("Enter Meters/Second^2: ");
+            double m_s2 = keyboard.nextDouble();
+            keyboard.nextLine();
+            double Gs = m_s2 / 9.81;
+            System.out.println(m_s2 + " Meters/Second^2 is " + String.format("%.2f", Gs) + " Gs.");
+        } else if (selection == 10) {
+            System.out.println("Enter Gs: ");
+            double Gs = keyboard.nextDouble();
+            keyboard.nextLine();
+            double m_s2 = Gs * 9.81;
+            System.out.println(Gs + " Gs is " + String.format("%.2f", m_s2) + " Meters/Second^2.");
         }
     }
 }
